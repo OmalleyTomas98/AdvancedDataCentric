@@ -11,7 +11,7 @@
     <title>Show Orders Page</title>
 </head>
 <body>
-<h1>List of Products</h1>
+<h1>List of Orders</h1>
 <table>
     <tr>
         <th>Order ID</th>
@@ -28,8 +28,8 @@
         <td>${ordero.oId }</td>
         <td>${ordero.qty}</td>
         <td>${ordero.orderDate}</td>
-        <td>${ordero.cust}</td>
-        <td>${ordero.prod}</td>
+        <td>${ordero.cust.cName}</td>
+        <td>${ordero.prod.pDesc}</td>
 
 </tr>
     </c:forEach>

@@ -11,9 +11,10 @@ import org.hibernate.validator.constraints.NotBlank;
 @Table(name="CUSTOMERS")
 public class Customer {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue
 	@Column(name="CID")
 	private Long cId;
+
 
 	@Column(name="CNAME")
 	@NotBlank

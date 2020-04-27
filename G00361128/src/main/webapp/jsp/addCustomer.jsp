@@ -3,23 +3,20 @@
 
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
-
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="iso-8859-1">
-    <title>Add New Product </title>
+    <title>Add New Customer </title>
 </head>
 <body>
-<form:form modelAttribute="product">
+<h1>Add New Customer</h1>
+
+<form:form modelAttribute="customer">
     <table>
         <tr>
-            <td>product Desc:</td>
-            <td> <form:input path="pDesc"></form:input></td>
-        </tr>
-        <tr>
-            <td>Quantity in stock</td>
-            <td> <form:input path="qtyInStock"></form:input></td>
+            <td>Cust Name:</td>
+            <td> <form:input path="cName"></form:input>may not be empty</td>
 
         </tr>
         <tr>
