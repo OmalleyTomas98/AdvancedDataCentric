@@ -21,5 +21,7 @@ public class CustomerService {
     public void save(Customer c)
     {
         cr.save(c);
+
     }
+
 }

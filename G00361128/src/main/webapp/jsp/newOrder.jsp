@@ -3,7 +3,6 @@
 
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,15 +10,16 @@
     <title> New Order </title>
 </head>
 <body>
+<h1>New Order</h1>
 <form:form modelAttribute="order">
     <table>
         <tr>
             <td>Customer:</td>
-            <td> <form:input path="cust"></form:input></td>
+            <td><form:input path="cust.cId"></form:input></td>
         </tr>
         <tr>
             <td>Product:</td>
-            <td> <form:input path="prod"></form:input></td>
+            <td><form:input path="prod.pId"></form:input></td>
         </tr>
         <tr>
             <td>Quantity:</td>
@@ -27,7 +27,7 @@
         </tr>
         <tr>
             <td colspan="2">
-                <input type="submit" value="Order"/>
+                <input type="submit" value="Add"/>
             </td>
         </tr>
         <tr>

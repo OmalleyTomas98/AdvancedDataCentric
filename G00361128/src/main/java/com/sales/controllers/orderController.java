@@ -38,10 +38,10 @@ public class orderController {
     public String newOrderGET(Model model) {
         Map<Integer, String> orders = new
                 LinkedHashMap<Integer, String>();
-        orders.put(1, "Iphone1");
-        orders.put(2, "Iphone2");
-        orders.put(3, "Iphone3");
-        orders.put(4, "Iphone4");
+        orders.put(1, "");
+        orders.put(2, "");
+        orders.put(3, "");
+        orders.put(4, "");
         model.addAttribute("orderList", orders);
 
         Order o = new Order();

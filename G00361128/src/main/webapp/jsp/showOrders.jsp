@@ -12,32 +12,34 @@
 </head>
 <body>
 <h1>List of Orders</h1>
-<table>
-    <tr>
-        <th>Order ID</th>
-        <th>Order Quantity</th>
-        <th>Order Order date</th>
-        <th>Customer Name</th>
-        <th>Ordered Product</th>
-
-
-    </tr>
-    <tr>
-        <c:forEach items="${oss}" var="ordero">
-    <tr>
-        <td>${ordero.oId }</td>
-        <td>${ordero.qty}</td>
-        <td>${ordero.orderDate}</td>
-        <td>${ordero.cust.cName}</td>
-        <td>${ordero.prod.pDesc}</td>
-
-</tr>
-    </c:forEach>
+<c:forEach items="${oss}" var="ors">
+    <br>
+    <h2>${ors.oId}</h2>
+    <table>
+        <tr>
+            <th>Quantity</th>
+            <th>Order Date</th>
+            <th>Customer ID</th>
+            <th>Customer Name</th>
+            <th>Product ID</th>
+            <th>Product Description</th>
+        </tr>
+        <tr>
+        <tr>
+            <td>${ors.qty}</td>
+            <td>${ors.orderDate}</td>
+            <td>${ors.cust.cId}</td>
+            <td>${ors.cust.cName}</td>
+            <td>${ors.prod.pId}</td>
+            <td>${ors.prod.pDesc}</td>
+        </tr>
+    </table>
+</c:forEach>
     </tr>
 
     <tr>
         <td><a href="/index.html">Home</a></td>
-        <td><a href="/addOrder.html">Add Order </a></td>
+        <td><a href="/newOrder.html">Add Order </a></td>
         <td><a href="/listProducts.html">List Products</a></td>
         <td><a href="/listCustomers.html">List Customers</a></td>
         <td><a href="/logout.html">Logout</a></td>

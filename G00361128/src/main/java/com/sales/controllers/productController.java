@@ -38,10 +38,10 @@ public class productController {
     public String addProductGET(Model model) {
         Map<Integer, String> products = new
                 LinkedHashMap<Integer, String>();
-        products.put(1, "Iphone1");
-        products.put(2, "Iphone2");
-        products.put(3, "Iphone3");
-        products.put(4, "Iphone4");
+        products.put(1, "");
+        products.put(2, "");
+        products.put(3, "");
+        products.put(4, "");
         model.addAttribute("productList", products);
 
         Product p = new Product();
