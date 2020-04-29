@@ -7,6 +7,7 @@ import com.sales.models.Product;
 import com.sales.repositories.OrderRepository;
 import com.sales.services.CustomerService;
 import com.sales.services.OrderService;
+import org.aspectj.weaver.ast.Or;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -36,13 +37,21 @@ public class orderController {
 
     @RequestMapping(value = "/newOrder.html", method = RequestMethod.GET)
     public String newOrderGET(Model model) {
-        Map<Integer, String> orders = new
-                LinkedHashMap<Integer, String>();
-        orders.put(1, "");
-        orders.put(2, "");
-        orders.put(3, "");
-        orders.put(4, "");
-        model.addAttribute("orderList", orders);
+
+    ArrayList<Order> orders = os.findAll();
+
+
+        Map<Customer, Integer > ordersList = new
+                LinkedHashMap<Customer, Integer >();
+
+    for (Order o : orders) {
+        ordersList.put(
+
+                o.getCust() ,   o.getQty()
+        );
+    }
+
+        model.addAttribute("ordersList", orders);
 
         Order o = new Order();
         model.addAttribute("order", o);
